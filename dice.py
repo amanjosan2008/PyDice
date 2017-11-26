@@ -19,7 +19,7 @@ header.pack()
 h = Entry(root)
 h.pack()
 h.focus_set()
- 
+
 a = Button(root, text="Roll Dice", width=30, command=dice)
 a.pack()
 
