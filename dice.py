@@ -5,6 +5,16 @@ import sys
 
 root = Tk()
 
+e = Entry(root, width=10, font=("Helvetica", 30, "bold"), justify=CENTER)
+e.pack()
+
+e.delete(0, END)
+e.insert(0, "Ready!!")
+
+def dice():
+    e.delete(0, END)
+    e.insert(0, randint(1,6))
+
 def exit():
     print("Bye Bye!!")
     sys.exit()
@@ -12,22 +22,11 @@ def exit():
 header = Label(root, text="Dice App v1.0")
 header.pack()
 
-e = Entry(root)
-e.pack()
-
-e.delete(0, END)
-e.insert(0, "Click Roll Dice!!")
-
-def dice():
-    e.delete(0, END)
-    e.insert(0, randint(1,6))
-
-a = Button(root, text="Roll Dice", width=30, command=dice)
+a = Button(root, text="Roll Dice", width=20, command=dice)
 a.pack()
 
-exit = Button(root, text="Exit App", width=30, command=exit)
-exit.pack()
+f = Button(root, text="Exit App", width=20, fg="Red", command=exit)
+f.pack()
 
-root.geometry("300x300")
+root.geometry("280x130")
 root.mainloop()
-
