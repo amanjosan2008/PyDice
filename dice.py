@@ -5,6 +5,14 @@ import sys
 
 root = Tk()
 
+header = Label(root, text="Dice App v1.0", font=("Times", 35))
+header.pack()
+
+photo = PhotoImage(file="dice.gif")
+
+label = Label(image=photo)
+label.pack(side=RIGHT)
+
 e = Entry(root, width=10, font=("Helvetica", 30, "bold"), justify=CENTER)
 e.pack()
 
@@ -19,14 +27,11 @@ def exit():
     print("Bye Bye!!")
     sys.exit()
 
-header = Label(root, text="Dice App v1.0")
-header.pack()
-
 a = Button(root, text="Roll Dice", width=20, command=dice)
 a.pack()
 
 f = Button(root, text="Exit App", width=20, fg="Red", command=exit)
 f.pack()
 
-root.geometry("280x130")
+root.geometry("400x200")
 root.mainloop()
